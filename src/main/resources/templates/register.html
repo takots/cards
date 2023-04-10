@@ -6,6 +6,9 @@
 </head>
 <body>
 <h1 th:text="${name}"></h1>
+<div th:if="${error}">
+    <div th:text="${error}"></div>
+</div>
 <form method="post" action="/register" th:object="${user}">
     <input type="email" id="email" name="email" placeholder="Email" th:field="*{email}" />
     <input type="text" id="username" name="username" placeholder="Username" th:field="*{username}" />
